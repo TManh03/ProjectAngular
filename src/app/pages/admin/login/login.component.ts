@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { routes } from '../../../app.routes';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,16 +15,15 @@ export class LoginComponent {
     userName: '',
     password: ''
   };
-  constructor(private router: Router){
+  constructor(private router: Router){}
 
-  }
-  
-  onLogin(){
-    if(this.loginObj.userName == "admin" && this.loginObj.password == "334455"){
+  onLogin() {
+    if(this.loginObj.userName == "admin" && this.loginObj.password == "334455") {
       this.router.navigateByUrl('/products')
-    }else{
+
+    } else {
       alert('Wrong Credentials')
     }
   }
-  
+
 }
